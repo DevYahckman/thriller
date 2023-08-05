@@ -23,14 +23,20 @@ function Result(props) {
         </div>
       </div>
 
-      <p className=" mt-10">
+      {/* <p className=" mt-10">
         {" "}
         LONDON{" "}
         <span>
           <HiOutlineArrowNarrowRight />
         </span>{" "}
         NEWYORK{" "}
-      </p>
+      </p> */}
+
+      <div className="flex mt-7 text-secondColor font-bold text-2xl">
+        <p className="">LONDON</p>
+      <p> <HiOutlineArrowNarrowRight className="mt-1 mx-3" size={30}/></p>
+      <p>New York</p>
+      </div>
 
 <div>
     <Cards/>
