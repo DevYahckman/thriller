@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { BiSolidPlane } from "react-icons/bi";
+import { BiSolidPlane, BiTrain } from "react-icons/bi";
+import { FaShip, FaCar } from "react-icons/fa";
 import Form from "./form";
 import Result from "./result";
 
@@ -7,20 +8,20 @@ function DashBoard(props) {
   const [active, setActive] = useState([0]);
   const ticketData = [
     {
-      icon: <BiSolidPlane className="ml-3 mb-1" size={25} />,
+      icon: <BiSolidPlane size={25} />,
       label: "Flight",
     },
     {
-      icon: <BiSolidPlane className="ml-3 mb-1" size={25} />,
-      label: "Flight",
+      icon: <BiTrain size={25} />,
+      label: "Train",
     },
     {
-      icon: <BiSolidPlane className="ml-3 mb-1" size={25} />,
-      label: "Flight",
+      icon: <FaShip size={25} />,
+      label: "Ship",
     },
     {
-      icon: <BiSolidPlane className="ml-3 mb-1" size={25} />,
-      label: "Flight",
+      icon: <FaCar size={25} />,
+      label: "Car",
     },
   ];
   return (
@@ -47,11 +48,11 @@ function DashBoard(props) {
                 } text-center cursor-pointer
              text-logoColor 
              ml-7 md:ml-3
-             px-4 py-2
-             lg:px-6 lg:py-4 bg-white text-xl`}
+             px-4 py-2  
+             lg:px-7 lg:py-4 bg-white text-xl`}
               >
-                <BiSolidPlane className="ml-3 mb-1" size={25} />
-                <p>Flight</p>
+                <div className="ml-3 mb-1">{item.icon}</div>
+                <p>{item.label}</p>
               </div>
             ))}
           </div>
